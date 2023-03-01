@@ -1,10 +1,22 @@
+let x;
+let y;
+let pos;
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 400);
+  // x = 400; 
+  // y = 200;
+  pos = createVector(width/2, height/2);
+  background(0);
 }
 
 function draw() {
-  background(255);
-  ellipse(50,50,80,80);
-  ellipse(100,100,100,80);
-  ellipse(300,300,100,80);
+  stroke(255, 100);
+  strokeWeight(2);
+  point(pos.x, pos.y);
+  pos.x = pos.x + random(-1,1);
+  pos.y = pos.y + random(-1,1);
+  
+  var r = floor(random(4));
 }
+
